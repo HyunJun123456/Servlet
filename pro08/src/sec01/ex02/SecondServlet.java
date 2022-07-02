@@ -1,4 +1,4 @@
-package sec01.ex01;
+package sec01.ex02;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,13 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-//@WebServlet("/first")
-public class FirstServlet extends HttpServlet{
+//@WebServlet("/second")
+public class SecondServlet extends HttpServlet{
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html; charset=utf-8");
 		PrintWriter out = response.getWriter();
-		response.sendRedirect("second?name=lee");
-		
+		out.println("<html><body>");
+		out.println("refresh를 이용한 redirect 실습입니다.");
+		out.println("</body></html>");
 	}
 }
