@@ -33,7 +33,7 @@ public class ViewServlet extends HttpServlet{
 			Date joinDate = memberVO.getJoinDate();
 			out.print("<tr><td>"+id+"</td><td>"+pwd+"</td><td>"+name+"</td><td>"
 							+email+"</td><td>"+joinDate+"</td><td>"
-							+"<a href='/pro08/member3?command=delMember&id="+id
+							+"<a href='/pro08/member?command=delMember&id="+id
 							+"'>삭제</a></td></tr>");
 					
 		}
