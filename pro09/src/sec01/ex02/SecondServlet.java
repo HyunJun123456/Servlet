@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/second")
+//@WebServlet("/second")
 public class SecondServlet extends HttpServlet{
 	public void init(ServletConfig config) throws ServletException {
 		System.out.println("init 메서드 호출");
