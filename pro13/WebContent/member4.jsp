@@ -5,10 +5,10 @@
 %>
 
 <jsp:useBean id="m" class="sec01.ex01.MemberBean" scope="page"/>
-<jsp:setProperty property="id" name="m" />
-<jsp:setProperty property="pwd" name="m" />
-<jsp:setProperty property="name" name="m"/>
-<jsp:setProperty property="email" name="m"/>
+<jsp:setProperty property="id" name="m" param="id"/>
+<jsp:setProperty property="pwd" name="m"  param="pwd"/>
+<jsp:setProperty property="name" name="m" param="name"/>
+<jsp:setProperty property="email" name="m" param="email"/>
 <%
 	MemberDAO memberDAO = new MemberDAO();
 	memberDAO.addMember(m);
