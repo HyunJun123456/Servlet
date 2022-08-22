@@ -13,7 +13,7 @@ import com.myspring.pro30.board.vo.ArticleVO;
 import com.myspring.pro30.board.vo.ImageVO;
 
 
-@Repository("boardDAO") //Repository�� �ȵǾ� �־ ������ ��(���Կ� ���� ����)
+@Repository("boardDAO") 
 public class BoardDAOImpl implements BoardDAO {
 	@Autowired
 	private SqlSession sqlSession;
@@ -22,6 +22,23 @@ public class BoardDAOImpl implements BoardDAO {
 	public List selectAllArticlesList() throws DataAccessException {
 		List<ArticleVO> articlesList = articlesList = sqlSession.selectList("mapper.board.selectAllArticlesList");
 		return articlesList;
+	}
+
+	@Override
+	public int insertNewArticle(Map articleMap) throws DataAccessException{
+		int articleNO = selectNewArticleNO();
+		articleMap.put("articleNO", articleNO);
+		sqlSession.insert("mapper.board.insertNewArticle", articleMap);
+		return articleNO;
+	}
+
+	private int selectNewArticleNO() throws DataAccessException {
+		return sqlSession.selectOne("mapper.board.selectNewArticleNO");
+	}
+
+	@Override
+	public ArticleVO selectArticle(int articleNO) throws DataAccessException{
+		return sqlSession.selectOne("mapper.board.selectArticle", articleNO);
 	}
 
 }

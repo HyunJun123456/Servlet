@@ -28,8 +28,6 @@
 	</beans:bean>
 
  -->
-
- 
     <beans:bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
 		<beans:property name="definitions">
 			<beans:list>
