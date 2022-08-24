@@ -41,6 +41,17 @@ public class ImageVO {
 	public void setArticleNO(int articleNO) {
 		this.articleNO = articleNO;
 	}
+	public ImageVO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public ImageVO(int imageFileNO, String imageFileName, Date regDate, int articleNO) {
+		super();
+		this.imageFileNO = imageFileNO;
+		this.imageFileName = imageFileName;
+		this.regDate = regDate;
+		this.articleNO = articleNO;
+	}
 	
 	
 	
