@@ -6,7 +6,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.io.BufferedReader;
 import java.io.IOException;
-
+//aws 공부중임
 public class ApiExplorer {
     public static void main(String[] args) throws IOException {
     	// 1. URL을 만들기 위한 StringBuilder.
