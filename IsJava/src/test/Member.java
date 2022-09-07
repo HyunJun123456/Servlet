@@ -17,7 +17,11 @@ public class Member {
 		}else {
 			System.out.println("obj1과 obj2는 동등하지 않습니다.");
 		}
+		
+		Object obj = new Object();
+		System.out.println(obj.toString());
 	}
+	
 	
 	
 	
@@ -38,5 +42,10 @@ public class Member {
 			}
 		}
 		return false;
+	}
+	
+	@Override
+	public int hashCode() {
+		return id.hashCode();
 	}
 }
