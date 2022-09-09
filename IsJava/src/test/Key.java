@@ -32,5 +32,9 @@ public class Key {
 		//식별키 "new Key(1)"로 "홍길동"을 읽어옴
 		String value = hashMap.get(new Key(1));
 		System.out.println(value);
+		/*
+		hashCode() 메소드에서 리턴하는 해시코드가 다르기 때문에 다른 식별키로 인식하기 때문에
+		읽을 값이 없어서 null이 나옴
+		*/
 	}
 }
