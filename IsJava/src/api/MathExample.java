@@ -36,5 +36,22 @@ public class MathExample {
 		double v13= Math.rint(5.7);
 		System.out.println("v12= "+v12);
 		System.out.println("v13= "+v13);
+
+		long v14 = Math.round(5.3);
+		long v15 = Math.round(5.7);
+		System.out.println("v14= "+v14);
+		System.out.println("v15= "+v15);
+		
+		double value = 12.3456;
+		double temp1 = value*100;
+		long temp2 = Math.round(temp1);
+		double v16 = temp2 / 100.0;
+		System.out.println("v16= "+v16);
+		
+		
+		
+		
+		
+		
 	}
 }
